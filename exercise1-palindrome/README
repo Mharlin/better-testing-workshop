@@ -1,0 +1,10 @@
+Palindrome - when a word reads the same forwards and backwards
+
+The generator should not be the same as the implementation
+
+1. create palindrome gen with even and odd number of characters
+    should only need one custom gen
+2. write specs for checkReverse
+    check both positive and negative cases
+3. find the bug in checkIndices
+    fix the implementation
