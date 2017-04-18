@@ -2,6 +2,7 @@ package prisoners_dilemma
 
 import org.scalacheck._
 import Package._
+import org.scalacheck.Gen.const
 
 object RuleGenerators {
 

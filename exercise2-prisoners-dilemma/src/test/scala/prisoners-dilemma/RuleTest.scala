@@ -11,7 +11,8 @@ object RuleGenerators {
 //  S = Suckers payoff
 
 // Example of a valid rule: Rules(temptationToDefect = 3, rewardForMutualCooperation = 2, punishmentForMutualDefection = 1, suckersPenalty = 0)
-// Implement rule generator. The values for the different points should be random but follow these rules 2R > (T +  S)
+// Implement rule generator. The values for the different points should be random but follow these rules:
+// T > R > P > S and 2R > (T +  S)
   def ruleGen(max: Points): Gen[Rules] = ???
 
   implicit val arbRules: Arbitrary[Rules] = ???
