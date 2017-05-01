@@ -1,17 +1,16 @@
 *** Better tests with less code ***
 
+** What is property based testing ** (3 mins)
+    - High-level specification of behaviour for a range of data points
+    - Compare to unit testing square root function
+    - Show example - square root with ScalaCheck
+    
 ** Why property based testing ** (5 mins)
 	- Covers edge cases
 	- Explicit rules about input and output
 	- Fewer tests cover more
 		Less code to change when refactoring
 	- The tests aren't biased with the way you "think" that the code should work
-
-** How? ** (3 mins)
-	- Formal verification
-	- Cannot be automized for Turing-complete languages
-		Halting problem
-	- Random datasets created by generators
 
 ** Properties ** (5 mins)
         - Structure
@@ -86,18 +85,14 @@
 reflektioner om presentationen:
 
 Installation av demomiljö som SBT om man inte har det
-förslag: docker image med sbt och scala installerat och repositoryt hämtat från git
+säga att sbt ska vara installerat i början så att folk kan ladda ner det
 
 ta bort allt som inte är moves och rules
 mer om varför Generatorer är viktigt och varför det kan vara svårt
 efter ca 10 min visa generatorn för reglerna
 
-Slängs in i konceptet snabbt mer om property based
-säga att sbt ska vara installerat i början så att folk kan ladda ner det
 Spela mer på prisoner's dilemma med humor
 länk till slides
 
-mer jämförelse med enhetstester tidigt speciellt med square root
-    kommer missa tester
-
+lägg upp presentationen på gh-pages
 
