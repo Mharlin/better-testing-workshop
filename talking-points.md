@@ -1,5 +1,7 @@
 *** Better tests with less code ***
 
+** Ask if everyone has sbt installed, if not ask them to install it during the presentation **
+
 ** What is property based testing ** (3 mins)
     - High-level specification of behaviour for a range of data points
     - Compare to unit testing square root function
