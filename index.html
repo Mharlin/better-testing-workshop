@@ -132,7 +132,7 @@ Note:
    <section data-notes="implication operator">
       <p><h2>Conditional properties</h2></p>
       <pre><code class="scala" data-trim data-noescape >
-         forAll { n: Int => (n == 0) <mark>==></mark> (n == 0) }.check
+         forAll { n: Int => <mark>(n == 0) ==></mark> (n == 0) }.check
 
          ! Gave up after only 4 passed tests. 500 tests were discarded.
       </code></pre>
