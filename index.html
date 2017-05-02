@@ -58,7 +58,7 @@ Note:
 
    <section>
       <pre><code class="scala" data-trim>
-         val propSqrt = forAll { (n: Int) => scala.math.sqrt(n*n) == n }
+         val propSqrt = forAll { (n: Double) => scala.math.sqrt(n*n) == n }
 
          propSqrt.check
          ! Falsified after 2 passed tests.
