@@ -17,3 +17,7 @@ project/plugins/project/
 workspace.xml
 
 node_modules/
+.idea/
+
+tags
+
