@@ -8,3 +8,6 @@ The generator should not be the same as the implementation
     check both positive and negative cases
 3. find the bug in checkIndices
     fix the implementation
+
+
+When importing the project with IntelliJ choose to import it as a BSP project

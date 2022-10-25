@@ -131,27 +131,31 @@ Note:
       </code></pre>
         </section>
 
-        <section data-notes="implication operator">
+        <section data-seperator-notes="^Note:">
           <p>
-          <h2>Grouping properties</h2>
+          <h2>Conditions that always hold true</h2>
           </p>
-          <pre><code class="scala" data-trim data-noescape >
-         object StringSpecification extends Properties("String") {
-           import Prop.forAll
-
-           property("startsWith") = forAll { (a: String, b: String) =>
-             (a+b).startsWith(a)
-           }
-
-           property("endsWith") = forAll { (a: String, b: String) =>
-             (a+b).endsWith(b)
-           }
-
-           property("substring") = forAll { (a: String, b: String) =>
-             (a+b).substring(a.length) == b
-           }
-         }
+          <pre class="fragment"><code class="scala" data-trim data-noescape >
+          it should "startWith" in {
+            forAll { (a: String, b: String) => (a+b).startsWith(a) }
+          }
       </code></pre>
+
+          <pre class="fragment"><code class="scala" data-trim data-noescape >
+          it should "endWith" in {
+            forAll { (a: String, b: String) => (a+b).endsWith(b) }
+          }
+      </code></pre>
+
+          <pre class="fragment"><code class="scala" data-trim data-noescape >
+          it should "substring" in {
+            forAll { (a: String, b: String) => (a+b).substring(a.length) == b }
+          }
+      </code></pre>
+        <aside class="notes">
+         Tests that it works if `a` or `b` are empty  
+         or both of them are empty  
+        </aside>
         </section>
       </section>
 
@@ -177,9 +181,9 @@ Note:
          } yield (n,m)
       </code></pre>
 
-          Note:
-          for comprehension
-          two random integer values
+  Note:
+          for comprehension  
+          two random integer values  
           one being at least twice as big as the other
         </section>
 

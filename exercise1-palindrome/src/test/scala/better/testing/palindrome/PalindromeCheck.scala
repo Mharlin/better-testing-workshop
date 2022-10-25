@@ -1,29 +1,20 @@
 package better.testing.palindrome
 
-import Generators._
-import org.scalacheck._
+import org.scalacheck.*
 import org.scalacheck.Prop.forAll
 import org.scalacheck.Arbitrary.arbitrary
-import org.scalatest.prop.PropertyChecks
-import org.scalatest.PropSpec
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
+import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 
-object Generators {
+class PalindromeCheck extends AnyFlatSpec with ScalaCheckPropertyChecks with Matchers with PalindromeCheckers {
   val palindromeGen: Gen[String] = for {
     s <- arbitrary[String]
-  } yield s
-}
+  } yield s + s.reverse
 
-object PalindromeCheck extends Properties("Palindrome") with PalindromeCheckers {
-  property("checkReverse") = forAll(palindromeGen) { s =>
-    checkReverse(s)
+  it should "check reverse" in {
+    forAll(palindromeGen) { s =>
+      checkReverse(s) shouldBe true
+    }
   }
-}
-
-class PalindromeSpecifications extends PropSpec with PropertyChecks with PalindromeCheckers {
-  import org.scalatest._
-  import Matchers._
-
-  property("checkReverse") { forAll(palindromeGen) { s =>
-    checkReverse(s) shouldBe true
-  }}
 }
