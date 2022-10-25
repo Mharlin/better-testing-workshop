@@ -1,10 +1,17 @@
 package prisoners_dilemma
 
+type Points = Int
+
+sealed trait Move
+case object Defect extends Move
+case object Cooperate extends Move
+
+type MoveSet = (Move, Move)
+type ScoreSet = (Points, Points)
 case class Rules(temptationToDefect: Points,
                  rewardForMutualCooperation: Points,
                  punishmentForMutualDefection: Points,
                  suckersPenalty: Points)
-
 
 object Rules {
   def score(rules: Rules, moves: MoveSet): ScoreSet =

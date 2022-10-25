@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/exercise2-prisoners-dilemma.iml" filepath="$PROJECT_DIR$/.idea/modules/exercise2-prisoners-dilemma.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/exercise2-prisoners-dilemma-build.iml" filepath="$PROJECT_DIR$/.idea/modules/exercise2-prisoners-dilemma-build.iml" />
-    </modules>
-  </component>
-</project>
