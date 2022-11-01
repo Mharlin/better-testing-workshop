@@ -149,7 +149,8 @@ Note:
 
           <pre class="fragment"><code class="scala" data-trim data-noescape >
           it should "substring" in {
-            forAll { (a: String, b: String) => (a+b).substring(a.length) == b }
+            forAll { (a: String, b: String) => 
+              (a+b).substring(a.length) == b }
           }
       </code></pre>
         <aside class="notes">
@@ -207,15 +208,16 @@ Note:
            (1, 'Y')
          )
       </code></pre>
-        </section>
-      </section>
-
-      <section>
-        <section data-markdown>
-          <script type="text/template">
-         ## Demo
-         
-      </script>
+          <pre class="fragment"><code class="scala" data-trim>
+            implicit val arbVowel: Arbitrary[Char] = Arbitaray(vowel)
+          </code></pre>
+          <pre class="fragment"><code class="scala" data-trim>
+            implicit def noShrink[T]: Shrink[T] = noShrinkAny
+            implicit val noShrinkChar: Shrink[Char] = noShrinkAny
+          </code></pre>
+        <aside class="notes">
+          import org.scalacheck.Shrink.shrinkAny
+        </aside>
         </section>
       </section>
 

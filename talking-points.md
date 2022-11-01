@@ -1,5 +1,9 @@
 *** Better tests with less code ***
 
+** Presentation of subject and yourself **
+  - Post it exercise in pairs - 5 min
+    - What are your most common problems/irritations when testing?
+  - In the conclusion of the workshop see how many of the things we have a better solution for
 ** Ask if everyone has sbt installed, if not ask them to install it during the presentation **
 
 ** What is property based testing ** (3 mins)
@@ -82,6 +86,7 @@
 
 ** Q & A ** (3 mins)
 	- Questions that were not answerd during session
+  - How many of the problem spots in testing did we address?
 
 
 reflektioner om presentationen:

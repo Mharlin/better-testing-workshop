@@ -10,7 +10,7 @@ import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 class PalindromeCheck extends AnyFlatSpec with ScalaCheckPropertyChecks with Matchers with PalindromeCheckers {
   val palindromeGen: Gen[String] = for {
     s <- arbitrary[String]
-  } yield s + s.reverse
+  } yield s
 
   it should "check reverse" in {
     forAll(palindromeGen) { s =>
